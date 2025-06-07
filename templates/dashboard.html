@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard | AMLV Advocacia</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="dashboard">
+        <h2>Bem-vindo, {{ user }}</h2>
+        <p>Área reservada aos clientes do escritório AMLV Advocacia.</p>
+        <a href="{{ url_for('logout') }}">Sair</a>
+    </div>
+</body>
+</html>
