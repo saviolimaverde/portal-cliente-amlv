@@ -1,20 +1,21 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Portal do Cliente | AMLV Advocacia</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Portal do Cliente - Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="login-container">
-        <h2>Portal do Cliente</h2>
-        {% if erro %}
-            <p class="erro">{{ erro }}</p>
-        {% endif %}
-        <form method="post" action="{{ url_for('login') }}">
-            <input type="email" name="email" placeholder="E-mail" required>
-            <input type="password" name="senha" placeholder="Senha" required>
-            <button type="submit">Entrar</button>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded-2xl shadow-lg w-96">
+        <h2 class="text-2xl font-bold mb-6 text-center text-black">Portal do Cliente</h2>
+        <form action="/login" method="POST" class="space-y-4">
+            <input type="email" name="email" placeholder="E-mail" required
+                class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-black" />
+            <input type="password" name="password" placeholder="Senha" required
+                class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-black" />
+            <button type="submit"
+                class="w-full bg-black text-white font-bold py-2 rounded-md hover:bg-gray-800">Entrar</button>
         </form>
     </div>
 </body>
